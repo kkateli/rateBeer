@@ -2,8 +2,22 @@
 const state = {
   beer1: "",
   beer2: "",
-  beer3: ""
+  beer3: "",
+  ip:""
 };
+
+//get user ip
+axios.get('http://ip.jsontest.com/?callback=?')
+.then(function (response) {
+  // handle success
+  state.ip = response.data;
+  console.log(response.data);
+})
+.catch(function (error) {
+  // handle error
+  console.log(error);
+});
+
 
 const beerOneRating = one => {
   state.beer1 = one.value;
@@ -55,7 +69,7 @@ const calculator = () => {
     default:
       beerOne.must++;
   }
-  console.log(beerOne);
+  
 
   switch (state.beer2) {
     case "beer2-one":
@@ -73,7 +87,7 @@ const calculator = () => {
     default:
       beerTwo.must++;
   }
-  console.log(beerTwo);
+  
 
   switch (state.beer3) {
     case "beer3-one":
@@ -91,13 +105,35 @@ const calculator = () => {
     default:
       beerThree.must++;
   }
-  console.log(beerThree);
-  if (state.beer1 !== "" && state.beer2 !== "" && state.beer3 !== "") {
+  //get users' ip who rated
+let currentIp = "";
+   axios.get('https://beer-rating-cc5ce.firebaseio.com/.json')
+  .then(function (response) {
+    // handle success
+    Object.keys(response.data).map(element => {
+        if(response.data[element].ip===state.ip){
+            currentIp="";
+        }else{
+            currentIp=state.ip;
+        }
+    });
+    
+    
+  })
+  .catch(function (error) {
+    // handle error
+    console.log(error);
+  });
+  
+
+  if (state.beer1 !== "" && state.beer2 !== "" && state.beer3 !== "" && currentIp!=="") {
     axios
       .post("https://beer-rating-cc5ce.firebaseio.com/.json", {
         beerOne: beerOne,
         beerTwo: beerTwo,
-        beerThree: beerThree
+        beerThree: beerThree,
+        ip:state.ip
+        
       })
       .then(response => {
         console.log(response);
@@ -107,5 +143,7 @@ const calculator = () => {
         console.log(error);
         alert("Oops, something wrong happened. Please double check. ");
       });
+  }else{
+    alert("Oops, something wrong happened. Please double check. ");
   }
 };
