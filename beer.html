@@ -47,7 +47,8 @@
                 name="beer1"
                 id="beer1-one"
                 value="beer1-one"
-                checked
+                onchange="beerOneRating(this)"
+                
               />
               <label for="beer1-one">
                 <span>
@@ -65,7 +66,7 @@
                 name="beer1"
                 id="beer1-two"
                 value="beer1-two"
-                checked
+                onchange="beerOneRating(this)"
               />
               <label for="beer1-two">
                 <span>
@@ -83,7 +84,7 @@
                 name="beer1"
                 id="beer1-three"
                 value="beer1-three"
-                checked
+                onchange="beerOneRating(this)"
               />
               <label for="beer1-three">
                 <span>
@@ -101,7 +102,7 @@
                 name="beer1"
                 id="beer1-four"
                 value="beer1-four"
-                checked
+                onchange="beerOneRating(this)"
               />
               <label for="beer1-four">
                 <span>
@@ -119,7 +120,7 @@
                 name="beer1"
                 id="beer1-five"
                 value="beer1-five"
-                checked
+                onchange="beerOneRating(this)"
               />
               <label for="beer1-five">
                 <span>
@@ -143,7 +144,7 @@
                 name="beer2"
                 id="beer2-one"
                 value="beer2-one"
-                checked
+                onchange="beerTwoRating(this)"
               />
               <label for="beer2-one">
                 <span>
@@ -161,6 +162,7 @@
                 name="beer2"
                 id="beer2-two"
                 value="beer2-two"
+                onchange="beerTwoRating(this)"
               />
               <label for="beer2-two">
                 <span>
@@ -178,6 +180,8 @@
                 name="beer2"
                 id="beer2-three"
                 value="beer2-three"
+                onchange="beerTwoRating(this)"
+                
               />
               <label for="beer2-three">
                 <span>
@@ -194,6 +198,7 @@
                 type="radio"
                 name="beer2"
                 id="beer2-four"
+                onchange="beerTwoRating(this)"
                 value="beer2-four"
               />
               <label for="beer2-four">
@@ -211,6 +216,7 @@
                 type="radio"
                 name="beer2"
                 id="beer2-five"
+                onchange="beerTwoRating(this)"
                 value="beer2-five"
               />
               <label for="beer2-five">
@@ -234,6 +240,7 @@
                 name="beer3"
                 id="beer3-one"
                 value="beer3-one"
+                onchange="beerThreeRating(this)"
               />
               <label for="beer3-one">
                 <span>
@@ -251,6 +258,7 @@
                 name="beer3"
                 id="beer3-two"
                 value="beer3-two"
+                onchange="beerThreeRating(this)"
               />
               <label for="beer3-two">
                 <span>
@@ -268,6 +276,7 @@
                 name="beer3"
                 id="beer3-three"
                 value="beer3-three"
+                onchange="beerThreeRating(this)"
               />
               <label for="beer3-three">
                 <span>
@@ -285,6 +294,8 @@
                 name="beer3"
                 id="beer3-four"
                 value="beer3-four"
+                onchange="beerThreeRating(this)"
+                
               />
               <label for="beer3-four">
                 <span>
@@ -302,6 +313,7 @@
                 name="beer3"
                 id="beer3-five"
                 value="beer3-five"
+                onchange="beerThreeRating(this)"
               />
               <label for="beer3-five">
                 <span>
@@ -312,12 +324,12 @@
                 </span>
               </label>
             </div>
-
           </div>
           <div class="text-center">
-              <button type="submit" class="btn btn-success" id="submit-button">Submit</button>
+            <button type="button" class="btn btn-success" id="submit-button" onclick="calculator()">
+              Submit
+            </button>
           </div>
-          
         </form>
       </div>
     </div>
@@ -337,5 +349,6 @@
       integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
       crossorigin="anonymous"
     ></script>
+    <script src="js/script.js"></script>
   </body>
 </html>
