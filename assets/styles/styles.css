@@ -6,10 +6,15 @@ body {
 }
 
 body {
- 
+
   justify-content: center;
   align-items: center;
   margin: 0;
+  display: flexbox;
+}
+
+.main{
+  margin: 0 auto;
 }
 
 
@@ -60,12 +65,16 @@ input[type="radio"]:checked + label span img {
 }
 
 .banner{
-  width:500px;
+  margin-left: auto;
+  margin-right: auto;
+  width: 500px;
   
 }
 
 .description-wrap{
   width:500px;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 .description{
@@ -78,6 +87,8 @@ input[type="radio"]:checked + label span img {
 #form-wrap{
   background-image:url("../images/background.jpg");
   width:500px;
+  margin-left: auto;
+  margin-right: auto;
   -webkit-transform:rotate(-5deg);
     -moz-transform:rotate(-5deg);
    
@@ -97,6 +108,8 @@ input[type="radio"]:checked + label span img {
 .cheers-wrap{
   width:500px;
   margin-top:30px;
+  margin-left: auto;
+  margin-right: auto;
   
 }
 
@@ -112,5 +125,9 @@ input[type="radio"]:checked + label span img {
 
 .centre{
   text-align: center;
+}
+
+.container{
+  margin-right:0;
 }
 
