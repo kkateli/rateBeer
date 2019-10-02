@@ -7,42 +7,50 @@ const state = {
   ip:""
 };
 
-//get user ip
-// function init(){
+//get user broswer info
+function init(){
   
-//   $.getJSON('https://json.geoiplookup.io/api?callback=?', function(data) {
-//   async function current(){
-//     state.ip = JSON.stringify(data.ip, null, 2);
-//   }
+  async function current(){
+    if (window.requestIdleCallback) {
+      requestIdleCallback(function () {
+          Fingerprint2.get(function (components) {
+            state.ip = components[0].value;
+          })
+      })
+    } else {
+      setTimeout(function () {
+          Fingerprint2.get(function (components) {
+            state.ip = components[0].value;
+          })  
+      }, 500)
+    }
+      
+  }
 
-//   current().then(
-//     axios
-//     .get("https://beer-rating-cc5ce.firebaseio.com/.json")
-//     .then((response)=> {
-//       // handle success
-//       let ids = Object.keys(response.data);
-//       for(let i of ids){
-//           if(response.data[i].ip===state.ip){
-//            state.ifRated.push("Rated");
-//           }
-//       }
-//       console.log(state.ip);
-//       console.log(state.ifRated); 
-//     })
-//     .catch((error)=> {
-//       // handle error
-//       console.log(error);
-//     })
-//   )
+  current().then(
+    axios
+    .get("https://beer-rating-cc5ce.firebaseio.com/.json")
+    .then((response)=> {
+      // handle success
+      let ids = Object.keys(response.data);
+      for(let i of ids){
+          if(response.data[i].ip===state.ip){
+           state.ifRated.push("Rated");
+          }
+      }
+      console.log(state.ip);
+      console.log(state.ifRated); 
+    })
+    .catch((error)=> {
+      // handle error
+      console.log(error);
+    })
+  )
+}
     
-    
-//   })
- 
-// }
+init();
 
 
-// init();
-  
 const beerOneRating = one => {
   state.beer1 = one.value;
 };
