@@ -11,334 +11,378 @@
       crossorigin="anonymous"
     />
     <link rel="stylesheet" href="./assets/styles/styles.css" />
-    <title>Document</title>
+
+    <title>Rate your beer</title>
   </head>
   <body>
-    <div>
-      <div class="container">
+    <div class="container">
+      <div class="banner">
+        <img class="banner-img" src="./assets/images/banner.png" alt="banner" />
+      </div>
+
+      <div class="description-wrap">
+        <p class="description">
+          <strong>
+            Brewers from different parts of Ontario will be showcasing their
+            best hops from you taste test and VOTE for the beer we get to call
+            our own!
+          </strong>
+        </p>
+      </div>
+
+      <div id="form-wrap">
+        <div id="title-wrap">
+          <p id="form-title">
+            <strong>Vote for the beer we get to call our own!</strong>
+          </p>
+        </div>
+
         <form>
-          <div class="row">
-            <div class="col-sm"></div>
-            <div class="col-sm">
-              Poor
-            </div>
-            <div class="col-sm">
-              Fair
-            </div>
-            <div class="col-sm">
-              OK
-            </div>
-            <div class="col-sm">
-              Good
-            </div>
-            <div class="col-sm">
-              Where have you been all my life?
-            </div>
-          </div>
+          <table class="table table-borderless">
+            <thead>
+              <tr>
+                <th style="width: 25%" scope="col"></th>
+                <th style="width: 10%"scope="col">
+                  Poor
+                </th>
+                <th style="width: 10%" scope="col">
+                  Fair
+                </th>
+                <th style="width: 10%" scope="col">
+                  OK
+                </th>
+                <th style="width: 10%" scope="col">
+                  Good
+                </th>
+                <th style="width: 35%" scope="col">
+                  Where have you been all my life?
+                </th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <th scope="row">
+                  Beer #1
+                </th>
 
-          <div class="row">
-            <div class="col-sm">
-              Beer #1
-            </div>
-
-            <div class="col-sm">
-              <input
-                type="radio"
-                name="beer1"
-                id="beer1-one"
-                value="beer1-one"
-                onchange="beerOneRating(this)"
-                
-              />
-              <label for="beer1-one">
-                <span>
-                  <img
-                    src="./assets//images/Check-mark.png"
-                    alt="Checked Icon"
+                <td>
+                  <input
+                    type="radio"
+                    name="beer1"
+                    id="beer1-one"
+                    value="beer1-one"
+                    onchange="beerOneRating(this)"
                   />
-                </span>
-              </label>
-            </div>
+                  <label for="beer1-one">
+                    <span>
+                      <img
+                        src="./assets//images/Check-mark.png"
+                        alt="Checked Icon"
+                      />
+                    </span>
+                  </label>
+                </td>
 
-            <div class="col-sm">
-              <input
-                type="radio"
-                name="beer1"
-                id="beer1-two"
-                value="beer1-two"
-                onchange="beerOneRating(this)"
-              />
-              <label for="beer1-two">
-                <span>
-                  <img
-                    src="./assets//images/Check-mark.png"
-                    alt="Checked Icon"
+                <td>
+                  <input
+                    type="radio"
+                    name="beer1"
+                    id="beer1-two"
+                    value="beer1-two"
+                    onchange="beerOneRating(this)"
                   />
-                </span>
-              </label>
-            </div>
+                  <label for="beer1-two">
+                    <span>
+                      <img
+                        src="./assets//images/Check-mark.png"
+                        alt="Checked Icon"
+                      />
+                    </span>
+                  </label>
+                </td>
 
-            <div class="col-sm">
-              <input
-                type="radio"
-                name="beer1"
-                id="beer1-three"
-                value="beer1-three"
-                onchange="beerOneRating(this)"
-              />
-              <label for="beer1-three">
-                <span>
-                  <img
-                    src="./assets//images/Check-mark.png"
-                    alt="Checked Icon"
+                <td>
+                  <input
+                    type="radio"
+                    name="beer1"
+                    id="beer1-three"
+                    value="beer1-three"
+                    onchange="beerOneRating(this)"
                   />
-                </span>
-              </label>
-            </div>
+                  <label for="beer1-three">
+                    <span>
+                      <img
+                        src="./assets//images/Check-mark.png"
+                        alt="Checked Icon"
+                      />
+                    </span>
+                  </label>
+                </td>
 
-            <div class="col-sm">
-              <input
-                type="radio"
-                name="beer1"
-                id="beer1-four"
-                value="beer1-four"
-                onchange="beerOneRating(this)"
-              />
-              <label for="beer1-four">
-                <span>
-                  <img
-                    src="./assets//images/Check-mark.png"
-                    alt="Checked Icon"
+                <td>
+                  <input
+                    type="radio"
+                    name="beer1"
+                    id="beer1-four"
+                    value="beer1-four"
+                    onchange="beerOneRating(this)"
                   />
-                </span>
-              </label>
-            </div>
+                  <label for="beer1-four">
+                    <span>
+                      <img
+                        src="./assets//images/Check-mark.png"
+                        alt="Checked Icon"
+                      />
+                    </span>
+                  </label>
+                </td>
 
-            <div class="col-sm">
-              <input
-                type="radio"
-                name="beer1"
-                id="beer1-five"
-                value="beer1-five"
-                onchange="beerOneRating(this)"
-              />
-              <label for="beer1-five">
-                <span>
-                  <img
-                    src="./assets//images/Check-mark.png"
-                    alt="Checked Icon"
+                <td>
+                  <input
+                    type="radio"
+                    name="beer1"
+                    id="beer1-five"
+                    value="beer1-five"
+                    onchange="beerOneRating(this)"
                   />
-                </span>
-              </label>
-            </div>
-          </div>
+                  <label for="beer1-five">
+                    <span>
+                      <img
+                        src="./assets//images/Check-mark.png"
+                        alt="Checked Icon"
+                      />
+                    </span>
+                  </label>
+                </td>
+              </tr>
 
-          <div class="row">
-            <div class="col-sm">
-              Beer #2
-            </div>
+              <tr>
+                <th scope="row">
+                  Beer #2
+                </th>
 
-            <div class="col-sm">
-              <input
-                type="radio"
-                name="beer2"
-                id="beer2-one"
-                value="beer2-one"
-                onchange="beerTwoRating(this)"
-              />
-              <label for="beer2-one">
-                <span>
-                  <img
-                    src="./assets//images/Check-mark.png"
-                    alt="Checked Icon"
+                <td>
+                  <input
+                    type="radio"
+                    name="beer2"
+                    id="beer2-one"
+                    value="beer2-one"
+                    onchange="beerTwoRating(this)"
                   />
-                </span>
-              </label>
-            </div>
+                  <label for="beer2-one">
+                    <span>
+                      <img
+                        src="./assets//images/Check-mark.png"
+                        alt="Checked Icon"
+                      />
+                    </span>
+                  </label>
+                </td>
 
-            <div class="col-sm">
-              <input
-                type="radio"
-                name="beer2"
-                id="beer2-two"
-                value="beer2-two"
-                onchange="beerTwoRating(this)"
-              />
-              <label for="beer2-two">
-                <span>
-                  <img
-                    src="./assets//images/Check-mark.png"
-                    alt="Checked Icon"
+                <td>
+                  <input
+                    type="radio"
+                    name="beer2"
+                    id="beer2-two"
+                    value="beer2-two"
+                    onchange="beerTwoRating(this)"
                   />
-                </span>
-              </label>
-            </div>
+                  <label for="beer2-two">
+                    <span>
+                      <img
+                        src="./assets//images/Check-mark.png"
+                        alt="Checked Icon"
+                      />
+                    </span>
+                  </label>
+                </td>
 
-            <div class="col-sm">
-              <input
-                type="radio"
-                name="beer2"
-                id="beer2-three"
-                value="beer2-three"
-                onchange="beerTwoRating(this)"
-                
-              />
-              <label for="beer2-three">
-                <span>
-                  <img
-                    src="./assets//images/Check-mark.png"
-                    alt="Checked Icon"
+                <td>
+                  <input
+                    type="radio"
+                    name="beer2"
+                    id="beer2-three"
+                    value="beer2-three"
+                    onchange="beerTwoRating(this)"
                   />
-                </span>
-              </label>
-            </div>
+                  <label for="beer2-three">
+                    <span>
+                      <img
+                        src="./assets//images/Check-mark.png"
+                        alt="Checked Icon"
+                      />
+                    </span>
+                  </label>
+                </td>
 
-            <div class="col-sm">
-              <input
-                type="radio"
-                name="beer2"
-                id="beer2-four"
-                onchange="beerTwoRating(this)"
-                value="beer2-four"
-              />
-              <label for="beer2-four">
-                <span>
-                  <img
-                    src="./assets//images/Check-mark.png"
-                    alt="Checked Icon"
+                <td>
+                  <input
+                    type="radio"
+                    name="beer2"
+                    id="beer2-four"
+                    onchange="beerTwoRating(this)"
+                    value="beer2-four"
                   />
-                </span>
-              </label>
-            </div>
+                  <label for="beer2-four">
+                    <span>
+                      <img
+                        src="./assets//images/Check-mark.png"
+                        alt="Checked Icon"
+                      />
+                    </span>
+                  </label>
+                </td>
 
-            <div class="col-sm">
-              <input
-                type="radio"
-                name="beer2"
-                id="beer2-five"
-                onchange="beerTwoRating(this)"
-                value="beer2-five"
-              />
-              <label for="beer2-five">
-                <span>
-                  <img
-                    src="./assets//images/Check-mark.png"
-                    alt="Checked Icon"
+                <td>
+                  <input
+                    type="radio"
+                    name="beer2"
+                    id="beer2-five"
+                    onchange="beerTwoRating(this)"
+                    value="beer2-five"
                   />
-                </span>
-              </label>
-            </div>
-          </div>
+                  <label for="beer2-five">
+                    <span>
+                      <img
+                        src="./assets//images/Check-mark.png"
+                        alt="Checked Icon"
+                      />
+                    </span>
+                  </label>
+                </td>
+              </tr>
 
-          <div class="row">
-            <div class="col-sm">
-              Beer #3
-            </div>
-            <div class="col-sm">
-              <input
-                type="radio"
-                name="beer3"
-                id="beer3-one"
-                value="beer3-one"
-                onchange="beerThreeRating(this)"
-              />
-              <label for="beer3-one">
-                <span>
-                  <img
-                    src="./assets//images/Check-mark.png"
-                    alt="Checked Icon"
+              <tr>
+                <th scope="row">
+                  Beer #3
+                </th>
+                <td>
+                  <input
+                    type="radio"
+                    name="beer3"
+                    id="beer3-one"
+                    value="beer3-one"
+                    onchange="beerThreeRating(this)"
                   />
-                </span>
-              </label>
-            </div>
+                  <label for="beer3-one">
+                    <span>
+                      <img
+                        src="./assets//images/Check-mark.png"
+                        alt="Checked Icon"
+                      />
+                    </span>
+                  </label>
+                </td>
 
-            <div class="col-sm">
-              <input
-                type="radio"
-                name="beer3"
-                id="beer3-two"
-                value="beer3-two"
-                onchange="beerThreeRating(this)"
-              />
-              <label for="beer3-two">
-                <span>
-                  <img
-                    src="./assets//images/Check-mark.png"
-                    alt="Checked Icon"
+                <td>
+                  <input
+                    type="radio"
+                    name="beer3"
+                    id="beer3-two"
+                    value="beer3-two"
+                    onchange="beerThreeRating(this)"
                   />
-                </span>
-              </label>
-            </div>
+                  <label for="beer3-two">
+                    <span>
+                      <img
+                        src="./assets//images/Check-mark.png"
+                        alt="Checked Icon"
+                      />
+                    </span>
+                  </label>
+                </td>
 
-            <div class="col-sm">
-              <input
-                type="radio"
-                name="beer3"
-                id="beer3-three"
-                value="beer3-three"
-                onchange="beerThreeRating(this)"
-              />
-              <label for="beer3-three">
-                <span>
-                  <img
-                    src="./assets//images/Check-mark.png"
-                    alt="Checked Icon"
+                <td>
+                  <input
+                    type="radio"
+                    name="beer3"
+                    id="beer3-three"
+                    value="beer3-three"
+                    onchange="beerThreeRating(this)"
                   />
-                </span>
-              </label>
-            </div>
+                  <label for="beer3-three">
+                    <span>
+                      <img
+                        src="./assets//images/Check-mark.png"
+                        alt="Checked Icon"
+                      />
+                    </span>
+                  </label>
+                </td>
 
-            <div class="col-sm">
-              <input
-                type="radio"
-                name="beer3"
-                id="beer3-four"
-                value="beer3-four"
-                onchange="beerThreeRating(this)"
-                
-              />
-              <label for="beer3-four">
-                <span>
-                  <img
-                    src="./assets//images/Check-mark.png"
-                    alt="Checked Icon"
+                <td>
+                  <input
+                    type="radio"
+                    name="beer3"
+                    id="beer3-four"
+                    value="beer3-four"
+                    onchange="beerThreeRating(this)"
                   />
-                </span>
-              </label>
-            </div>
+                  <label for="beer3-four">
+                    <span>
+                      <img
+                        src="./assets//images/Check-mark.png"
+                        alt="Checked Icon"
+                      />
+                    </span>
+                  </label>
+                </td>
 
-            <div class="col-sm">
-              <input
-                type="radio"
-                name="beer3"
-                id="beer3-five"
-                value="beer3-five"
-                onchange="beerThreeRating(this)"
-              />
-              <label for="beer3-five">
-                <span>
-                  <img
-                    src="./assets//images/Check-mark.png"
-                    alt="Checked Icon"
+                <td>
+                  <input
+                    type="radio"
+                    name="beer3"
+                    id="beer3-five"
+                    value="beer3-five"
+                    onchange="beerThreeRating(this)"
                   />
-                </span>
-              </label>
-            </div>
-          </div>
+                  <label for="beer3-five">
+                    <span>
+                      <img
+                        src="./assets//images/Check-mark.png"
+                        alt="Checked Icon"
+                      />
+                    </span>
+                  </label>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+
           <div class="text-center">
-            <button type="button" class="btn btn-success" id="submit-button" onclick="calculator()">
+            <button
+              type="button"
+              class="btn btn-success"
+              id="submit-button"
+              onclick="calculator()"
+            >
               Submit
             </button>
           </div>
         </form>
       </div>
+
+      <div class="cheers-wrap">
+        <strong
+          ><p class="cheers">
+            Watch out for <i>Bier Beaus</i> and <i>Bier Belles</i>, who will be
+            helping us make this ebent a success! Prost!
+          </p></strong
+        >
+        <div class="line"></div>
+        <strong>
+          <p>Beer Tasting</p>
+        </strong>
+        <ul>
+          <li>Thursday October 3rd 6:30pm</li>
+          <li>$35 per person</li>
+          <li>Price includes Beer Tasting Flights, Music and Gourmet Food</li>
+        </ul>
+        <p class="centre">Sign up at reception or online</p>
+      </div>
     </div>
-<!-- Boostrap libraries -->
-    <script
-      src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
-      integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
-      crossorigin="anonymous"
-    ></script>
+    <!-- Boostrap libraries -->
+    <script src="https://code.jquery.com/jquery-3.1.1.min.js"></script>
     <script
       src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
       integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
@@ -351,10 +395,7 @@
     ></script>
     <!-- Axios for sending/retrieving data from database -->
     <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
-    
-    
 
     <script src="js/script.js"></script>
-   
   </body>
 </html>

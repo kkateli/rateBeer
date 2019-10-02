@@ -6,13 +6,15 @@ body {
 }
 
 body {
-  display: flex;
+ 
   justify-content: center;
   align-items: center;
+  margin: 0;
 }
 
+
 input[type="radio"] {
-  display: none;
+  display: none
 } */
 
 input[type="radio"] + label {
@@ -52,3 +54,63 @@ input[type="radio"]:checked + label span img {
 #submit-button{
   margin-top:30px;
 }
+
+.banner-img{
+  width:500px;
+}
+
+.banner{
+  width:500px;
+  
+}
+
+.description-wrap{
+  width:500px;
+}
+
+.description{
+  color:darkgreen;
+  text-align: center;
+  font-family: 'Courier New', 'Arial Narrow', Arial, sans-serif;
+  font-size: 18px;
+}
+
+#form-wrap{
+  background-image:url("../images/background.jpg");
+  width:500px;
+  -webkit-transform:rotate(-5deg);
+    -moz-transform:rotate(-5deg);
+   
+}
+
+#form-title{
+  font-size: 30px;
+  text-align: center;
+  font-family: 'Courier New', 'Arial Narrow', Arial, sans-serif;
+}
+
+#title-wrap{
+  width:400px;
+  margin:auto;
+}
+
+.cheers-wrap{
+  width:500px;
+  margin-top:30px;
+  
+}
+
+.cheers{
+  font-family: 'Courier New', 'Arial Narrow', Arial, sans-serif;
+  font-size: 16px;
+  text-align: center;
+}
+
+.line{
+  border-top: 1px solid #8c8b8b;
+}
+
+.centre{
+  text-align: center;
+}
+

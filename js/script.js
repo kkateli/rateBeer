@@ -3,22 +3,46 @@ const state = {
   beer1: "",
   beer2: "",
   beer3: "",
-  ip: ""
+  ifRated:[],
+  ip:""
 };
 
 //get user ip
-axios
-  .get("http://ip.jsontest.com/?callback=?")
-  .then(function(response) {
-    // handle success
-    state.ip = response.data;
-    console.log(response.data);
-  })
-  .catch(function(error) {
-    // handle error
-    console.log(error);
-  });
+// function init(){
+  
+//   $.getJSON('https://json.geoiplookup.io/api?callback=?', function(data) {
+//   async function current(){
+//     state.ip = JSON.stringify(data.ip, null, 2);
+//   }
 
+//   current().then(
+//     axios
+//     .get("https://beer-rating-cc5ce.firebaseio.com/.json")
+//     .then((response)=> {
+//       // handle success
+//       let ids = Object.keys(response.data);
+//       for(let i of ids){
+//           if(response.data[i].ip===state.ip){
+//            state.ifRated.push("Rated");
+//           }
+//       }
+//       console.log(state.ip);
+//       console.log(state.ifRated); 
+//     })
+//     .catch((error)=> {
+//       // handle error
+//       console.log(error);
+//     })
+//   )
+    
+    
+//   })
+ 
+// }
+
+
+// init();
+  
 const beerOneRating = one => {
   state.beer1 = one.value;
 };
@@ -31,6 +55,7 @@ const beerThreeRating = three => {
 };
 
 const calculator = () => {
+  
   const beerOne = {
     poor: 0,
     fair: 0,
@@ -105,34 +130,12 @@ const calculator = () => {
   }
 
   
-let ifRated = [];
-
-  axios
-    .get("https://beer-rating-cc5ce.firebaseio.com/.json")
-    .then((response)=> {
-      // handle success
-      let ids = Object.keys(response.data);
-      for(let i of ids){
-          if(response.data[i].ip===state.ip){
-           ifRated.push("Rated");
-          }
-      }
-        
-      
-    })
-    .catch((error)=> {
-      // handle error
-      console.log(error);
-    });
-
-    console.log(ifRated);
-    console.log(ifRated.length);
 
   if (
     state.beer1 !== "" &&
     state.beer2 !== "" &&
-    state.beer3 !== "" &&
-    ifRated.length===0
+    state.beer3 !== ""
+    
     
   ) {
     axios
