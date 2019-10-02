@@ -179,5 +179,19 @@ input[type="radio"]:checked + label span img {
     font-size: 18px;
     text-align: center;
   }
-  
+
+  @media only screen and (max-width: 425px) {
+    #form-wrap{
+      
+      -webkit-transform:rotate(0deg);
+        -moz-transform:rotate(0deg);
+       
+    }
+
+  }
+}
+
+.Thankyouall{
+  font-family: 'Courier New', 'Arial Narrow', Arial, sans-serif;
+  font-size: 20px;
 }
