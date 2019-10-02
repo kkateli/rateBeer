@@ -3,53 +3,70 @@ const state = {
   beer1: "",
   beer2: "",
   beer3: "",
-  ifRated:[],
-  ip:""
+  ifRated: [],
+  ip: ""
 };
 
 //get user broswer info
-function init(){
-  
-  async function current(){
-    if (window.requestIdleCallback) {
-      requestIdleCallback(function () {
-          Fingerprint2.get(function (components) {
-            state.ip = components[0].value;
+
+function init() {
+  if (window.requestIdleCallback) {
+    requestIdleCallback(function() {
+      Fingerprint2.get(function(components) {
+        async function compareIp(){
+          state.ip = components[0].value;
+        }
+        compareIp().then(
+          axios
+          .get("https://beer-rating-cc5ce.firebaseio.com/.json")
+          .then(response => {
+            // handle success
+            let ids = Object.keys(response.data);
+            for (let i of ids) {
+              if (response.data[i].ip === state.ip) {
+                state.ifRated.push("Rated");
+              }
+            }
+            console.log(state.ip);
+            console.log(state.ifRated);
           })
-      })
-    } else {
-      setTimeout(function () {
-          Fingerprint2.get(function (components) {
-            state.ip = components[0].value;
-          })  
-      }, 500)
-    }
-      
+          .catch(error => {
+            // handle error
+            console.log(error);
+          })
+        )
+      });
+    });
+  } else {
+    setTimeout(function() {
+      Fingerprint2.get(function(components) {
+        async function compareIp(){
+          state.ip = components[0].value;
+        }
+        compareIp().then(
+          axios
+          .get("https://beer-rating-cc5ce.firebaseio.com/.json")
+          .then(response => {
+            // handle success
+            let ids = Object.keys(response.data);
+            for (let i of ids) {
+              if (response.data[i].ip === state.ip) {
+                state.ifRated.push("Rated");
+              }
+            }
+            console.log(state.ip);
+            console.log(state.ifRated);
+          })
+          .catch(error => {
+            // handle error
+            console.log(error);
+          })
+        )
+      });
+    }, 500);
   }
-
-  current().then(
-    axios
-    .get("https://beer-rating-cc5ce.firebaseio.com/.json")
-    .then((response)=> {
-      // handle success
-      let ids = Object.keys(response.data);
-      for(let i of ids){
-          if(response.data[i].ip===state.ip){
-           state.ifRated.push("Rated");
-          }
-      }
-      console.log(state.ip);
-      console.log(state.ifRated); 
-    })
-    .catch((error)=> {
-      // handle error
-      console.log(error);
-    })
-  )
 }
-    
 init();
-
 
 const beerOneRating = one => {
   state.beer1 = one.value;
@@ -63,7 +80,6 @@ const beerThreeRating = three => {
 };
 
 const calculator = () => {
-  
   const beerOne = {
     poor: 0,
     fair: 0,
@@ -137,15 +153,7 @@ const calculator = () => {
       beerThree.must++;
   }
 
-  
-
-  if (
-    state.beer1 !== "" &&
-    state.beer2 !== "" &&
-    state.beer3 !== ""
-    
-    
-  ) {
+  if (state.beer1 !== "" && state.beer2 !== "" && state.beer3 !== "" && state.ifRated.length===0) {
     axios
       .post("https://beer-rating-cc5ce.firebaseio.com/.json", {
         beerOne: beerOne,
