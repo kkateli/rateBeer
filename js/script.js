@@ -154,6 +154,10 @@ const beerEighteenRating = eighteen => {
   state.beer18 = eighteen.value;
 };
 
+const changeDivAfterClick=()=>{
+  document.getElementById("selections").innerHTML = "<div class='thankyou-wrap'><strong><p class='thankyou'>Thank you!</p></strong></div>";
+}
+
 const calculator = () => {
   if (state.ifRated.length === 0) {
     if (
@@ -200,7 +204,7 @@ const calculator = () => {
         })
         .then(response => {
           console.log(response);
-          window.location.href= "thankyou/thankyou.html";
+          changeDivAfterClick();
         })
         .catch(error => {
           console.log(error);

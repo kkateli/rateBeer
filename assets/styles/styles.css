@@ -76,6 +76,7 @@ input[type="radio"]:checked + label span img {
   width:500px;
   margin-left: auto;
   margin-right: auto;
+  padding:20px 0 20px 0;
 }
 
 .description{
@@ -89,16 +90,14 @@ input[type="radio"]:checked + label span img {
   background-image:url("../images/background.jpg");
   width:500px;
   margin-left: auto;
-  margin-right: auto;
-  -webkit-transform:rotate(-5deg);
-    -moz-transform:rotate(-5deg);
-   
+  margin-right: auto; 
 }
 
 #form-title{
   font-size: 33px;
   text-align: center;
   font-family: 'Courier New', 'Arial Narrow', Arial, sans-serif;
+  padding:15px 0 15px 0;
 }
 
 #title-wrap{
@@ -106,6 +105,19 @@ input[type="radio"]:checked + label span img {
   margin:auto;
 }
 
+#submit-button{
+  width:150px;
+  height:50px;
+ 
+}
+
+#button-s{
+  padding-bottom:25px;
+}
+
+#selections{
+  margin-left:20px;
+}
 .cheers-wrap{
   width:500px;
   margin-top:30px;
@@ -118,6 +130,7 @@ input[type="radio"]:checked + label span img {
   font-family: 'Courier New', 'Arial Narrow', Arial, sans-serif;
   font-size: 18px;
   text-align: center;
+  padding:20px 0 20px 0;
 }
 
 .line{
@@ -130,6 +143,10 @@ input[type="radio"]:checked + label span img {
 
 .container{
   margin-right:0;
+}
+
+.info{
+  padding:20px 0 20px 0;
 }
 
 
@@ -180,18 +197,17 @@ input[type="radio"]:checked + label span img {
     text-align: center;
   }
 
-  @media only screen and (max-width: 425px) {
-    #form-wrap{
-      
-      -webkit-transform:rotate(0deg);
-        -moz-transform:rotate(0deg);
-       
-    }
-
-  }
+  
 }
 
-.Thankyouall{
+.thankyou{
   font-family: 'Courier New', 'Arial Narrow', Arial, sans-serif;
-  font-size: 20px;
+  font-size: 30px;
+  text-align: center;
+}
+
+.thankyou-wrap{
+  width:300px;
+    margin:auto;
+    padding-bottom: 1px;
 }
